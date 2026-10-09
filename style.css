@@ -1,0 +1,12 @@
+:root{--bg:#f4f6f7;--fg:#263238;--sub:#607d8b;--card:#fff;--line:#cfd8dc}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#e0e0e0;--sub:#90a4ae;--card:#1e1e1e;--line:#2c3a41}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.8}
+header{background:#455a64;color:#fff;padding:20px 16px}
+header h1{margin:0;font-size:1.4rem}
+main{max-width:720px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:16px 0}
+h2{font-size:1.1rem;margin:0 0 8px}
+p,li{margin:4px 0}
+a{color:#4f8fbf}
+footer{color:var(--sub);font-size:.85rem;text-align:center;padding:24px 16px}

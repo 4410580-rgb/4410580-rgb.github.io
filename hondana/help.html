@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>本棚の使い方</title>
+    <meta name="theme-color" content="#15161a" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
+    <style>
+      :root {
+        --bg: #15161a;
+        --panel: #1c1e23;
+        --tile: #24262c;
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #e9e7e2;
+        --muted: #a3a6ad;
+        --accent: #f2c14e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', sans-serif;
+        line-height: 1.8;
+        -webkit-text-size-adjust: 100%;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: calc(env(safe-area-inset-top, 0px) + 20px) 16px calc(env(safe-area-inset-bottom, 0px) + 40px);
+      }
+      h1 {
+        font-size: 28px;
+        margin: 8px 0 4px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      h1 img {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 36px 0 8px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+      h3 {
+        font-size: 16px;
+        margin: 20px 0 4px;
+        color: var(--accent);
+      }
+      p,
+      li {
+        font-size: 15px;
+      }
+      .lead {
+        color: var(--muted);
+      }
+      .box {
+        background: var(--tile);
+        border-radius: 12px;
+        padding: 10px 16px;
+        margin: 12px 0;
+      }
+      .warn {
+        background: #3a2222;
+        color: #f2c4c0;
+      }
+      kbd {
+        display: inline-block;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-bottom-width: 2px;
+        border-radius: 5px;
+        padding: 0 6px;
+        font-size: 13px;
+        line-height: 1.6;
+        font-family: inherit;
+      }
+      nav ul {
+        padding-left: 1.2em;
+        columns: 2;
+      }
+      @media (max-width: 520px) {
+        nav ul {
+          columns: 1;
+        }
+      }
+      a {
+        color: var(--accent);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+      }
+      td,
+      th {
+        border-top: 1px solid var(--line);
+        padding: 6px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .back {
+        display: inline-block;
+        margin-top: 24px;
+        background: var(--accent);
+        color: #231a00;
+        border-radius: 10px;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><img src="./icons/icon-192.png" alt="" />本棚の使い方</h1>
+      <p class="lead">保存した漫画の画像を取り込んで読む本棚です。画像やデータは、あなたの端末(と、ペアリングした PC)の中だけに置きます。どこにも上げません。</p>
+
+      <nav>
+        <ul>
+          <li><a href="#install">入れ方(iPhone・Android・PC)</a></li>
+          <li><a href="#pair">PC とスマホをペアリングする</a></li>
+          <li><a href="#sync">同期のしくみ</a></li>
+          <li><a href="#import">取り込み</a></li>
+          <li><a href="#shelf">一覧・作品フォルダ</a></li>
+          <li><a href="#read">読む</a></li>
+          <li><a href="#zip">ZIP で渡す・残す</a></li>
+          <li><a href="#pc">PC の便利な使い方</a></li>
+          <li><a href="#care">注意(データを守る)</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="install">入れ方</h2>
+      <h3>iPhone・iPad(Safari)</h3>
+      <ol>
+        <li>Safari でこのページの本棚(<a href="./">本棚を開く</a>)を開く</li>
+        <li>共有ボタン(四角から矢印が出ているマーク)→「ホーム画面に追加」→「追加」</li>
+        <li>ホーム画面の「本棚」から開く。最初に「スマホ・タブレットとして使う」を選ぶ</li>
+      </ol>
+      <p>ホーム画面から開いて使ってください。Safari のまま使うと、しばらく開かない間に iPhone がデータを消してしまうことがあります。</p>
+
+      <h3>Android(Chrome)</h3>
+      <ol>
+        <li>Chrome で本棚を開く</li>
+        <li>右上の「︙」→「ホーム画面に追加」または「アプリをインストール」</li>
+        <li>ホーム画面の「本棚」から開く。最初に「スマホ・タブレットとして使う」を選ぶ</li>
+      </ol>
+      <p>Android では、ほかのアプリ(ギャラリー・ファイルなど)の「共有」から、画像や ZIP を本棚へ送れます。</p>
+
+      <h3>PC(Windows の Edge・Chrome)</h3>
+      <ol>
+        <li>Edge で本棚を開く</li>
+        <li>アドレスバーの右の「アプリを使用できます」のマーク(または「…」→「アプリ」→「このサイトをアプリとしてインストール」)でインストール</li>
+        <li>最初に「PC として使う」を選び、本棚フォルダを選ぶ(空のフォルダ。例:ドキュメントの中に「本棚」を作る)</li>
+        <li>Edge が「このフォルダの編集を許可しますか?」と聞いたら「ファイルの編集を許可する」</li>
+      </ol>
+      <p>本棚フォルダには「作品名\001.jpg」のように画像が並びます。管理データは同じフォルダの <code>komashelf.json</code> です。次からは開くたびに「本棚フォルダを開く」を1回押します(ブラウザの決まりです)。</p>
+
+      <h2 id="pair">PC とスマホをペアリングする(最初の1回だけ)</h2>
+      <ol>
+        <li>スマホと PC を同じ Wi-Fi につなぐ</li>
+        <li>PC の本棚で、右上の「︙」→「同期(スマホとつなぐ)・設定」→「ペアリングの番号を出す」</li>
+        <li>スマホの本棚で「︙」→「同期(PC とつなぐ)・設定」を開き、PC に出た4桁の番号を入れて「ペアリング」</li>
+      </ol>
+      <p>番号は10分間使えます。ペアリングした相手としかつながりません。</p>
+
+      <h2 id="sync">同期のしくみ</h2>
+      <ul>
+        <li>同じ Wi-Fi で、<strong>スマホと PC の両方で本棚を開いている間</strong>、自動でつないで両方向に同期します(閉じている間は同期しません)。</li>
+        <li>PC が正本です。同じ作品を両方で変えていた時は、スマホに「PC版 / iPhone版、どちらを優先しますか?」と出ます。</li>
+        <li>読んでいる位置は、新しく読んだ方を使います。削除したものはゴミ箱に入り、30日間は戻せます。</li>
+        <li>はじめに相手を見つける時だけ、無料の公開サーバー(PeerJS)を使います。画像と管理データはそこを通らず、Wi-Fi の中だけを流れます。そのサーバーが止まっている時は同期できません(ZIP で渡せます)。</li>
+        <li>スマホで「端末に残す」をオフにした作品は、PC に渡し終えたらスマホから画像を消して容量を空けます。読む時は PC から取り寄せます(同じ Wi-Fi で PC の本棚が開いている時)。</li>
+      </ul>
+
+      <h2 id="import">取り込み</h2>
+      <ul>
+        <li>一覧の右下の「取り込み」から。iPhone は「写真から選ぶ」か「ファイル(ZIP・画像)」、PC は画像・フォルダ・ZIP を選ぶか、本棚の窓にドラッグ&ドロップ。</li>
+        <li>並びはファイル名順です(「10 (2).jpg」のような名前の違いも吸収します)。後から作品フォルダで並べ替えられます。</li>
+        <li>取り込み先:新しい読み切り / 新しい連載(第1話) / 既存の連載に新しい話 / 既存の作品の末尾。</li>
+        <li>作品名の欄に「[サークル名 (作者名)] 作品名」を貼ると、自動で3つに分けて入れます。</li>
+        <li>本棚で保存した ZIP(中に komashelf.json がある)は、作品名・作者・タグ・話・メモもそのまま元通りに取り込みます。</li>
+      </ul>
+
+      <h2 id="shelf">一覧・作品フォルダ</h2>
+      <table>
+        <tr><th>操作</th><th>何が起きるか</th></tr>
+        <tr><td>作品を押す</td><td>読み切りは続きから読む。連載は作品フォルダを開く</td></tr>
+        <tr><td>作品を長押し(PC は右クリック → 作品フォルダ)</td><td>作品フォルダ(ページ一覧・編集)</td></tr>
+        <tr><td>並び替え</td><td>最近読んだ順・名前順・追加順・作者毎・手動・シャッフル</td></tr>
+        <tr><td>タグ</td><td>押すと絞り込み(どれか1つでも付いた作品。多く当てはまる順)。列の右端の「除外検索」をオンにすると、押したタグを除外</td></tr>
+        <tr><td>作品フォルダの「︙」</td><td>編集・端末に残す・画像を保存・移動・アイコンの位置・ZIP・別名義・読み切り/連載・削除</td></tr>
+        <tr><td>ページを長押し</td><td>選択。そのまま動かすと、選んだページをまとめて移動</td></tr>
+      </table>
+      <p>開いた作品は、画面の左の列(スマホは下)にタブとして並びます。今のタブをもう一度押すと閉じます。タブは長押ししたまま動かすと並べ替えられます。</p>
+
+      <h2 id="read">読む</h2>
+      <ul>
+        <li>縦長の画面は1ページずつ、右開き(左へめくる)。左右の端を押してもめくれます。真ん中を押すとバー。</li>
+        <li>横長の画面は、ページを右から左へ横一列に並べて流します。見開きの組み方(1|2-3 / 1-2|3-4)は左上のボタンで切り替え。</li>
+        <li>2本指で拡大(PC は Ctrl+ホイール)。連載は最後のページから次の話へそのまま続きます。</li>
+      </ul>
+
+      <h2 id="zip">ZIP で渡す・残す</h2>
+      <p>作品フォルダの「︙」→「ZIPファイルで保存」、または一覧の「︙」→「選択する」で複数選んで ZIP に。ZIP は Android・iPad 版の本棚とも互換で、どの端末の「取り込み」でも元通りに戻ります。</p>
+
+      <h2 id="pc">PC の便利な使い方</h2>
+      <table>
+        <tr><td>ほかのタブの画像を本棚へドラッグ / 画像をコピーして <kbd>Ctrl</kbd>+<kbd>V</kbd></td><td>取り込み画面に並ぶ(作品フォルダを開いていれば、その作品に足す形で)</td></tr>
+        <tr><td>本棚フォルダの「取り込み待ち」</td><td>画像や ZIP を入れておくと、取り込み画面を開いた時に並ぶ(取り込んだら消えます)</td></tr>
+        <tr><td><kbd>←</kbd> <kbd>→</kbd> <kbd>Space</kbd> <kbd>PageUp</kbd> <kbd>PageDown</kbd> ・ホイール</td><td>ページをめくる</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+ホイール</td><td>読む画面は拡大、一覧・作品フォルダは表紙の大きさ</td></tr>
+        <tr><td><kbd>F</kbd> / <kbd>Esc</kbd></td><td>全画面 / 戻る</td></tr>
+        <tr><td>右クリック・<kbd>Ctrl</kbd>/<kbd>Shift</kbd>+クリック・<kbd>Delete</kbd></td><td>メニュー・複数選択・ゴミ箱へ</td></tr>
+        <tr><td>横に流せる列の上でホイール</td><td>横に流す(端で止まります)</td></tr>
+      </table>
+
+      <h2 id="care">注意(データを守る)</h2>
+      <div class="box warn">
+        <p><strong>スマホのホーム画面の「本棚」のアイコンを消すと、中のデータも消えます。</strong>PC とペアリングして同期しておくか、ZIP で残しておいてください。</p>
+      </div>
+      <ul>
+        <li>同じ端末で本棚を2つのタブで開くと、後から開いた方は止まります(データが食い違わないように)。</li>
+        <li>Web版を直した時は「新しい版があります。開き直す」が出ます。押すと新しい版で開き直します。</li>
+        <li>PC の本棚フォルダの中のファイルは、なるべく本棚の画面から変えてください(エクスプローラーで消した画像は「画像が見つかりません」になります)。</li>
+      </ul>
+      <a class="back" href="./">本棚を開く</a>
+    </main>
+  </body>
+</html>

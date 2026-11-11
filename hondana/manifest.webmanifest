@@ -23,6 +23,7 @@
     "params": {
       "title": "title",
       "text": "text",
+      "url": "url",
       "files": [
         { "name": "files", "accept": ["image/*", ".jpg", ".jpeg", ".png", ".webp", ".gif", ".zip", "application/zip", "application/x-zip-compressed"] }
       ]

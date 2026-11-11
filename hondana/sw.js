@@ -1,6 +1,6 @@
 /* 本棚(Web版)のサービスワーカー。一度開けばネットが無くても開けるように、ファイルを全部しまっておく。 */
-const VERSION = "021942b4372c"
-const ASSETS = ["./","./assets/index-B7XTEjTN.js","./assets/index-CsZI9AZ6.css","./help.html","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./manifest.webmanifest"]
+const VERSION = "9fa272aee911"
+const ASSETS = ["./","./assets/main-C8Qa-g_5.js","./assets/main-CsZI9AZ6.css","./assets/post-BWn_Rprq.js","./assets/relay-Dd3gbtJ_.js","./help.html","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./manifest.webmanifest"]
 const CACHE = 'hondana-app-' + VERSION
 const SHARE_DB = 'hondana-share'
 
@@ -34,7 +34,7 @@ function openShareDb() {
   })
 }
 
-/** Android の「共有」から送られた画像・ZIP を預かって、本棚の取り込み画面を開く */
+/** Android の「共有」から送られた画像・ZIP・リンクを預かって、本棚を開く */
 async function receiveShare(request) {
   try {
     const form = await request.formData()
@@ -44,6 +44,9 @@ async function receiveShare(request) {
       const tx = db.transaction('files', 'readwrite')
       const st = tx.objectStore('files')
       for (const f of files) st.add({ name: f.name || 'image', type: f.type || '', blob: f, at: Date.now() })
+      // リンクの共有(題名・本文・URL)。本棚が取り込み待ちに入れる
+      const text = ['title', 'text', 'url'].map((k) => form.get(k)).filter((v) => typeof v === 'string' && v).join('\n')
+      if (text) st.add({ text: text.slice(0, 10000), at: Date.now() })
       tx.oncomplete = resolve
       tx.onerror = () => reject(tx.error)
     })

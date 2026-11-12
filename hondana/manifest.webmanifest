@@ -1,7 +1,7 @@
 {
-  "name": "本棚",
-  "short_name": "本棚",
-  "description": "保存した漫画の画像を取り込んで読む本棚(Web版)",
+  "name": "コミフォルダ",
+  "short_name": "コミフォルダ",
+  "description": "保存した漫画の画像を取り込んで読む本棚「コミフォルダ」(Web版)",
   "id": "./",
   "start_url": "./",
   "scope": "./",

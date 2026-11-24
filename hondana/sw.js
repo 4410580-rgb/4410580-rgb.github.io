@@ -1,6 +1,6 @@
 /* 本棚(Web版)のサービスワーカー。一度開けばネットが無くても開けるように、ファイルを全部しまっておく。 */
-const VERSION = "bf93587ea823"
-const ASSETS = ["./","./assets/main-CluA_ka6.js","./assets/main-D_jLMy43.css","./assets/post-C1zMoSBl.js","./assets/relay-jDg7RYA9.js","./help.html","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./manifest.webmanifest"]
+const VERSION = "66de35141bd4"
+const ASSETS = ["./","./assets/main-8xgCDSLc.js","./assets/main-AXfmRGY2.css","./assets/post-BTok5Vg2.js","./assets/relay-pL_FVCxG.js","./help.html","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./manifest.webmanifest"]
 const CACHE = 'hondana-app-' + VERSION
 const SHARE_DB = 'hondana-share'
 
